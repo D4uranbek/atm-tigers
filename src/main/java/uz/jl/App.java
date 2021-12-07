@@ -10,10 +10,6 @@ import uz.jl.exceptions.APIException;
 public class App {
     static {
         try {
-            String a = null;
-            if (a.startsWith("dsds")){
-                System.out.println("😎");
-            }
             Loaders.init();
         } catch (APIException e) {
             e.printStackTrace();

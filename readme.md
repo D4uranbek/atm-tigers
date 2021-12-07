@@ -10,4 +10,4 @@ Overview of project
 - Second item
 - Third item
 
-![Bugun mening kunim](resources/1.jpg)
+![Bugun mening kunim](src/main/resources/1.jpg)

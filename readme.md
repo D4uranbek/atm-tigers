@@ -6,8 +6,5 @@ Overview of project
 1. First item
 2. Second item
 3. Third item
-- First item
-- Second item
-- Third item
 
 ![Bugun mening kunim](src/main/resources/1.jpg)

@@ -24,7 +24,7 @@ public class AppConfig {
 
     private static void load() throws APIException {
         try {
-            properties.load(new FileReader("app.properties"));
+            properties.load(new FileReader("src/main/resources/app.properties"));
         } catch (IOException e) {
             throw new APIException("File Topilmadi", HttpStatus.HTTP_404);
         }

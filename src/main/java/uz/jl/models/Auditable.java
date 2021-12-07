@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @ToString
 @AllArgsConstructor
 @Builder(builderMethodName = "parentBuilder", buildMethodName = "parentBuild")
-public class Auditable {
+public abstract class Auditable implements BaseEntity {
     private String id;
     private LocalDateTime createdAt;
     private String createdBy;

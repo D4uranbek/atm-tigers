@@ -27,5 +27,6 @@ public class Cards extends Auditable {
     private Status status;
     private BigDecimal balance;
     private String bankId;
+    private String holderId;
 
 }

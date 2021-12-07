@@ -23,15 +23,11 @@ import java.util.List;
 @NoArgsConstructor
 public class User extends Auditable {
     private String id;
-    @Unique
     private String username;
     private String password;
     private String bankId;
     private Role role;
     private UserStatus status;
-    private List<Passport> passportData = new ArrayList<>(1);
-    private List<Cards> cards = new ArrayList<>(1);
-    @Unique
     private String phoneNumber;
 
 

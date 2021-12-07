@@ -21,9 +21,10 @@ public class Passport extends Auditable {
     private String firstName;
     private String lastName;
     private String fatherName;
+    private String ownerId;
 
     @Builder(builderMethodName = "childBuilder")
-    public Passport(String id, LocalDateTime createdAt, String createdBy, LocalDateTime updatedAt, String updatedBy, int deleted, String serial, String number, Gender gender, String firstName, String lastName, String fatherName) {
+    public Passport(String id, LocalDateTime createdAt, String createdBy, LocalDateTime updatedAt, String updatedBy, int deleted, String serial, String number, Gender gender, String firstName, String lastName, String fatherName, String ownerId) {
         super(id, createdAt, createdBy, updatedAt, updatedBy, deleted);
         this.serial = serial;
         this.number = number;
@@ -31,5 +32,6 @@ public class Passport extends Auditable {
         this.firstName = firstName;
         this.lastName = lastName;
         this.fatherName = fatherName;
+        this.ownerId = ownerId;
     }
 }

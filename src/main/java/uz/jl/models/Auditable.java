@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 @AllArgsConstructor
-@Builder(builderMethodName = "parentBuilder", buildMethodName = "parentBuild")
+//@Builder(builderMethodName = "parentBuilder", buildMethodName = "parentBuild")
 public abstract class Auditable implements BaseEntity {
     private String id;
     private LocalDateTime createdAt;

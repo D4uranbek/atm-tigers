@@ -9,6 +9,7 @@ import java.util.Objects;
  */
 public class Session {
     private User sessionUser = new User();
+
     private static Session session = new Session();
 
     private Session() {

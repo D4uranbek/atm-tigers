@@ -13,4 +13,3 @@ public enum Status {
     ACTIVE(0);
     private final int code;
 }
-

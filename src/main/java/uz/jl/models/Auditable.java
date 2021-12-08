@@ -1,6 +1,9 @@
 package uz.jl.models;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import uz.jl.utils.BaseUtils;
 
 import java.time.LocalDateTime;
@@ -32,12 +35,4 @@ public class Auditable implements BaseEntity {
         this.updatedBy = updatedBy;
         this.deleted = deleted;
     }
-
-
-
-    public static void main(String[] args) {
-
-    }
-
-
 }

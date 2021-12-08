@@ -7,7 +7,6 @@ import lombok.Getter;
  * @author Elmurodov Javohir Mon 11:35 AM. 12/6/2021
  */
 
-
 @Getter
 @AllArgsConstructor
 public enum MenuKey {
@@ -31,9 +30,7 @@ public enum MenuKey {
     BLOCK_ADMIN,
     UN_BLOCK_ADMIN,
     BLOCK_LIST_ADMIN,
-
     CREATE_HR,
-
     DELETE_HR,
     LIST_HR,
     BLOCK_HR,
@@ -57,10 +54,6 @@ public enum MenuKey {
     LOGOUT,
     EXIT,
     UNDEFINED;
-/*    private final String code;
-    private final String uz;
-    private final String ru;
-    private final String en;*/
 
     public static MenuKey getByValue(String choice) {
         for (MenuKey menu : values()) {

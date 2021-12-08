@@ -9,7 +9,6 @@ import uz.jl.enums.card.CardType;
 import uz.jl.models.Auditable;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 
 /**
  * @author Elmurodov Javohir, Mon 12:07 PM. 12/6/2021
@@ -28,5 +27,4 @@ public class Cards extends Auditable {
     private BigDecimal balance;
     private String bankId;
     private String holderId;
-
 }

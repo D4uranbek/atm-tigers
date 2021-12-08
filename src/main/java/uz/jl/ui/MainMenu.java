@@ -14,10 +14,11 @@ public class MainMenu {
         Menu.menus().forEach((k, v) -> {
             System.out.println(k + " -> " + v);
         });
+
         String choice = Input.getStr("?:");
         MenuKey key = MenuKey.getByValue(choice);
-        switch (key) {
 
+        switch (key) {
             case LOGIN -> AuthUI.login();
             case REGISTER -> AuthUI.register();
             case PROFILE -> AuthUI.profile();
@@ -36,7 +37,6 @@ public class MainMenu {
             case BLOCK_HR -> AdminUI.block();
             case UN_BLOCK_HR -> AdminUI.unBlock();
             case BLOCK_LIST_HR -> AdminUI.blockList();
-
 
             case CREATE_USER -> HrUI.create();
             case DELETE_USER -> HrUI.delete();

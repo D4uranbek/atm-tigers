@@ -4,7 +4,6 @@ import uz.jl.enums.http.HttpStatus;
 import uz.jl.exceptions.APIException;
 import uz.jl.models.settings.Language;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
@@ -14,12 +13,12 @@ import java.util.Properties;
  */
 public class AppConfig {
     public static Language language;
-    private static Properties properties = new Properties();
+
+    private static final Properties properties = new Properties();
 
     public static void init() throws APIException {
         load();
         language = Language.getByCode(get("bank.default.language"));
-
     }
 
     public static String get(String key) {
@@ -30,8 +29,7 @@ public class AppConfig {
         try {
             properties.load(new FileReader("src/main/resources/app.properties"));
         } catch (IOException e) {
-            throw new APIException("File Topilmadi", HttpStatus.HTTP_404);
+            throw new APIException("File not found", HttpStatus.HTTP_404);
         }
     }
-
 }

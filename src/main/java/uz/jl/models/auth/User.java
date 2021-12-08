@@ -2,7 +2,6 @@ package uz.jl.models.auth;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import uz.jl.configs.AppConfig;
 import uz.jl.enums.auth.Role;

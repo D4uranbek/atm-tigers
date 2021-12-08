@@ -10,5 +10,4 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE,ElementType.FIELD,ElementType.METHOD})
 @Inherited
 public @interface Unique {
-
 }

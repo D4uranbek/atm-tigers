@@ -1,6 +1,6 @@
 package uz.jl.mapper;
 
-/*
+/**
  * @author Elmurodov Javohir, Mon 11:14 AM. 12/6/2021
  */
 
@@ -12,5 +12,4 @@ public abstract class BaseMapper<E, D> {
     abstract E to(D d);
 
     abstract D from(E e);
-
 }

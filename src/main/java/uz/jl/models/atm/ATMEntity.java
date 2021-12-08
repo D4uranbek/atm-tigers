@@ -14,7 +14,4 @@ public class ATMEntity extends Auditable {
     private ATMStatus status;
     private double latitude;
     private double longitude;
-
-
-
 }

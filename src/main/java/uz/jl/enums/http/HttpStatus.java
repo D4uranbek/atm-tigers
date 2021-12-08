@@ -7,7 +7,6 @@ import lombok.Getter;
  * @author Elmurodov Javohir, Mon 12:28 PM. 11/29/2021
  */
 
-
 @Getter
 @AllArgsConstructor
 public enum HttpStatus {

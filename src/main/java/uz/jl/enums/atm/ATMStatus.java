@@ -13,4 +13,3 @@ public enum ATMStatus {
     ACTIVE(0);
     private final int code;
 }
-

@@ -12,9 +12,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-@AllArgsConstructor
-//@Builder(builderMethodName = "parentBuilder", buildMethodName = "parentBuild")
-public abstract class Auditable implements BaseEntity {
+public class Auditable implements BaseEntity {
     private String id;
     private LocalDateTime createdAt;
     private String createdBy;
@@ -26,14 +24,15 @@ public abstract class Auditable implements BaseEntity {
         this.id = BaseUtils.genId();
     }
 
-    /*@Builder(builderMethodName = "parentBuilder", buildMethodName = "parentBuild")
+    @Builder(builderMethodName = "parentBuilder", buildMethodName = "parentBuild")
     public Auditable(LocalDateTime createdAt, String createdBy, LocalDateTime updatedAt, String updatedBy, int deleted) {
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.updatedAt = updatedAt;
         this.updatedBy = updatedBy;
         this.deleted = deleted;
-    }*/
+    }
+
 
 
     public static void main(String[] args) {

@@ -4,36 +4,43 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import uz.jl.annotations.Unique;
+import uz.jl.configs.AppConfig;
 import uz.jl.enums.auth.Role;
 import uz.jl.enums.auth.UserStatus;
 import uz.jl.models.Auditable;
-import uz.jl.models.card.Cards;
-import uz.jl.models.personal.Passport;
+import uz.jl.models.settings.Language;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author Elmurodov Javohir, Mon 11:40 AM. 12/6/2021
  */
 @Getter
 @Setter
-@NoArgsConstructor
 public class User extends Auditable {
-    private String id;
     private String username;
     private String password;
     private String bankId;
     private Role role;
     private UserStatus status;
     private String phoneNumber;
+    private Language language;
 
+    public User() {
+        super();
+        this.role = Role.ANONYMOUS;
+        this.language = AppConfig.language;
+    }
 
-/*    @Builder(builderMethodName = "childBuilder", buildMethodName = "childBuild")
-    public User(LocalDateTime createdAt, String createdBy, LocalDateTime updatedAt, String updatedBy, int deleted, String username) {
+    @Builder(builderMethodName = "childBuilder", buildMethodName = "childBuild")
+    public User(LocalDateTime createdAt, String createdBy, LocalDateTime updatedAt, String updatedBy, int deleted, String username, String password, String bankId, Role role, UserStatus status, String phoneNumber, Language language) {
         super(createdAt, createdBy, updatedAt, updatedBy, deleted);
         this.username = username;
-    }*/
+        this.password = password;
+        this.bankId = bankId;
+        this.role = role;
+        this.status = status;
+        this.phoneNumber = phoneNumber;
+        this.language = language;
+    }
 }

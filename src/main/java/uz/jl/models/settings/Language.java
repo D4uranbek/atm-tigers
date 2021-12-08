@@ -2,20 +2,27 @@ package uz.jl.models.settings;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import uz.jl.models.BaseEntity;
-import uz.jl.utils.BaseUtils;
 
 /**
  * @author Elmurodov Javohir, Tue 12:18 PM. 12/7/2021
  */
 @Getter
-@Setter
 @AllArgsConstructor
-@NoArgsConstructor
-public class Language implements BaseEntity {
-    private String id = BaseUtils.genId();
-    private String name;
-    private String code;
+public enum Language {
+
+    UZ("UZ", "Uzbek"),
+    RU("RU", "Russian"),
+    EN("EN", "English");
+
+    private final String name;
+    private final String code;
+
+    public static Language getByCode(String code) {
+        for (Language language : values()) {
+            if (language.getCode().equalsIgnoreCase(code)) {
+                return language;
+            }
+        }
+        return null;
+    }
 }

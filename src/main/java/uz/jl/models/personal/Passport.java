@@ -25,7 +25,7 @@ public class Passport extends Auditable {
 
     @Builder(builderMethodName = "childBuilder")
     public Passport(String id, LocalDateTime createdAt, String createdBy, LocalDateTime updatedAt, String updatedBy, int deleted, String serial, String number, Gender gender, String firstName, String lastName, String fatherName, String ownerId) {
-        super(id, createdAt, createdBy, updatedAt, updatedBy, deleted);
+        super(createdAt, createdBy, updatedAt, updatedBy, deleted);
         this.serial = serial;
         this.number = number;
         this.gender = gender;
